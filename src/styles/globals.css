@@ -8,6 +8,8 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --primary: #27374D;
+  --secondary: #1D267D;
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
@@ -87,12 +89,6 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
 
 a {
@@ -104,4 +100,20 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+input {
+  outline: none;
+  background: #fff;
+  border-width: 0 0 1px 0px;
+  border-style: solid;
+  border-color: var(--bg-primary);
+  color:var(--bg-primary);
+  font-size: 24px;
+  padding:0 8px;
+  transition: all 0.2s ease;
+}
+input:focus{
+  border-color: var(--secondary);
+  border-width: 0 0 2px 0px;
 }
